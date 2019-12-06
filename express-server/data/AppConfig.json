@@ -1,0 +1,19 @@
+{
+  "Map2D": {
+    "TiledMapURl": "http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineStreetGray/MapServer",
+    "FeiZhuYaoRenYuanRealTimeMapURl": "http://10.2.0.244:6080/arcgis/rest/services/RealTimeVisitors/MapServer",
+    "ZhuyaoRenyuanRealTimeMapURl": "http://10.2.0.244:6080/arcgis/rest/services/RealTime/MapServer",
+    "OldTimeMapRUL":"http://10.2.0.244:6080/arcgis/rest/services/OldTime/MapServer",
+    "MapCenter":[30.756751, 120.4868],
+    "MaxZoom":22,
+    "MinZoom":3,
+    "Zoom":9
+  },
+  "Map3D": {
+    "TiledMapURl": "http://127.0.0.1:10080/{z}/{y}/{x}.png",
+    "MapCenter":[30.756751, 120.4868],
+    "MaxZoom":22,
+    "MinZoom":3,
+    "Zoom":9
+  }
+}

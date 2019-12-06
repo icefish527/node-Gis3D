@@ -1,0 +1,237 @@
+﻿{
+    "mapBaseLayerData": [
+        {
+            "name": "谷歌 街道图 10 原色（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleStreet10NoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 19,
+                "reuseTiles": true
+            },
+            "view": {
+                "lat": 34.0,
+                "lng": 110.00,
+                "level": 3
+            }
+        },
+        {
+            "name": "谷歌 街道图 10 灰黑（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleStreet10DarkGrayNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 街道图 10 灰白（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleStreet10BrightGrayNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 街道图 10 藏蓝（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleStreet10DarkBlueNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 街道图 10 藏青（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleStreet10DarkGreenNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 卫星图 10 原色（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSatellite10/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 卫星图 10 灰黑（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSatellite10DarkGrayNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 卫星图 10 藏蓝（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSatellite10DarkBlueNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 卫星图 10 藏青（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSatellite10DarkGreenNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 地形图 10 原色（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSurface10NoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 地形图 10 灰白（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSurface10BrightGrayNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 地形图 10 蓝色（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSurface10BlueColor/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 地形图 10 蓝灰（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleSurface10DarkGrapeNoLabel/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "海图 10 原色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/SeaMap10/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "海图 10 深色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/SeaMap10Color/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "谷歌 灯光图 09 原色（无注记）",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/GoogleNight10/MapServer/tile/{z}/{y}/{x}",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        },
+        {
+            "name": "在线地图",
+            "url": "'http://{s}.tile.osm.org/{z}/{x}/{y}.png'",
+            "options": {
+                "maxZoom": 10,
+                "reuseTiles": true
+            }
+        }
+    ],
+    "mapAdditionalLayerData": [
+        {
+            "name": "全球海洋 黑色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/GlobalOceanBlack/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "全球海洋 白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/GlobalOceanWhite/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "全球海洋 灰色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/GlobalOceanGrayDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "全球海洋 深蓝",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/GlobalOceanDarkBlueDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "全球国界 白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/NationalBoundaryWhiteDynimic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "全球国界 黑色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/NationalBoundaryBlackDynimic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "全球国界 灰色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/NationalBoundaryGrayDynimic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "中国一级区划（省界）白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/ChinaAdm1WhiteDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "中国二级区划（市界）白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/ChinaAdm2WhiteDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "中国三级区划（县界）白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/ChinaAdm3WhiteDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "美国一级区划（州界）白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/USAAdm1WhiteDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "美国二级区划（县界）白色",
+            "url": "http://10.0.0.15:6080/arcgis/rest/services/VectorMaps/USAAdm2WhiteDynamic/MapServer",
+            "type": "ArcGISDynamicMapServiceLayer",
+            "opacity": 1
+        },
+        {
+            "name": "谷歌 路网图 09 原色",
+            "url": "http://10.0.0.15:6080/ArcGIS/rest/services/GoogleRoadNetwork10/MapServer",
+            "type": "ArcGISTiledMapServiceLayerUrl",
+            "opacity": 1
+        },
+        {
+            "name": "谷歌 路网图 09 灰白",
+            "url": "http://10.0.0.15:6080/ArcGIS/rest/services/GoogleRoadNetwork10Gray/MapServer",
+            "type": "ArcGISTiledMapServiceLayerUrl",
+            "opacity": 1
+        },
+        {
+            "name": "谷歌 路网图 09 蓝色",
+            "url": "http://10.0.0.15:6080/ArcGIS/rest/services/GoogleRoadNetwork10Blue/MapServer",
+            "type": "ArcGISTiledMapServiceLayerUrl",
+            "opacity": 1
+        }
+    ]
+}

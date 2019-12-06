@@ -1,0 +1,354 @@
+[
+  {
+    "from": "KJ00015",
+    "to": "KJ00016",
+    "routeType": "IP-VPN",
+    "company": "电信十六局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "JN00003",
+    "to": "KJ00003",
+    "routeType": "其它",
+    "company": "电信十局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "KJ00015",
+    "to": "NJ00003",
+    "routeType": "呼叫转移",
+    "company": "电信四局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "JD00003",
+    "to": "DY00001",
+    "routeType": "其它",
+    "company": "电信七局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "LZ00005",
+    "to": "KJ00006",
+    "routeType": "IP-VPN",
+    "company": "电信十局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "CD00001",
+    "to": "NJ00004",
+    "routeType": "一类卫星通信",
+    "company": "电信四局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "BJ00003",
+    "to": "EP00004",
+    "routeType": "固定通信",
+    "company": "电信十一局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "GZ00004",
+    "to": "GZ00003",
+    "routeType": "一类卫星通信",
+    "company": "电信五局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "LZ00001",
+    "to": "BJ00003",
+    "routeType": "固定通信",
+    "company": "电信一局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "BJ00001",
+    "to": "GZ00002",
+    "routeType": "其它",
+    "company": "电信五局",
+    "isArrowFlow": true
+  },
+  {
+    "from": "DY00006",
+    "to": "CD00003",
+    "routeType": "一类卫星通信",
+    "company": "电信六局"
+  },
+  {
+    "from": "DY00003",
+    "to": "JN00006",
+    "routeType": "其它",
+    "company": "电信三局"
+  },
+  {
+    "from": "KJ00013",
+    "to": "GZ00005",
+    "routeType": "呼叫转移",
+    "company": "电信五局"
+  },
+  {
+    "from": "BJ00002",
+    "to": "DY00001",
+    "routeType": "其它",
+    "company": "电信七局"
+  },
+  {
+    "from": "GZ00002",
+    "to": "LZ00001",
+    "routeType": "其它",
+    "company": "电信八局"
+  },
+  {
+    "from": "DY00002",
+    "to": "KJ00002",
+    "routeType": "蜂窝移动通信",
+    "company": "电信十局"
+  },
+  {
+    "from": "NJ00004",
+    "to": "KJ00016",
+    "routeType": "IP-VPN",
+    "company": "电信十六局"
+  },
+  {
+    "from": "KJ00003",
+    "to": "KJ00001",
+    "routeType": "蜂窝移动通信",
+    "company": "电信十局"
+  },
+  {
+    "from": "LZ00003",
+    "to": "JD00003",
+    "routeType": "一类卫星通信",
+    "company": "电信十二局"
+  },
+  {
+    "from": "CD00001",
+    "to": "JN00005",
+    "routeType": "其它",
+    "company": "电信三局"
+  },
+  {
+    "from": "GZ00004",
+    "to": "NJ00001",
+    "routeType": "其它",
+    "company": "电信四局"
+  },
+  {
+    "from": "DY00001",
+    "to": "CD00007",
+    "routeType": "集群通信",
+    "company": "电信六局"
+  },
+  {
+    "from": "JD00003",
+    "to": "JN00003",
+    "routeType": "呼叫转移",
+    "company": "电信三局"
+  },
+  {
+    "from": "LZ00003",
+    "to": "NJ00001",
+    "routeType": "其它",
+    "company": "电信四局"
+  },
+  {
+    "from": "GZ00002",
+    "to": "BJ00001",
+    "routeType": "集群通信",
+    "company": "电信一局"
+  },
+  {
+    "from": "KJ00015",
+    "to": "JN00006",
+    "routeType": "其它",
+    "company": "电信三局"
+  },
+  {
+    "from": "CD00002",
+    "to": "EP00004",
+    "routeType": "固定通信",
+    "company": "电信十一局"
+  },
+  {
+    "from": "KJ00006",
+    "to": "JD00003",
+    "routeType": "一类卫星通信",
+    "company": "电信十二局"
+  },
+  {
+    "from": "KJ00002",
+    "to": "SY00004",
+    "routeType": "呼叫转移",
+    "company": "电信二局"
+  },
+  {
+    "from": "CD00005",
+    "to": "KJ00014",
+    "routeType": "IP-VPN",
+    "company": "电信十五局"
+  },
+  {
+    "from": "CD00005",
+    "to": "GZ00001",
+    "routeType": "其它",
+    "company": "电信五局"
+  },
+  {
+    "from": "EP00004",
+    "to": "JN00004",
+    "routeType": "呼叫转移",
+    "company": "电信三局"
+  },
+  {
+    "from": "NJ00004",
+    "to": "GZ00002",
+    "routeType": "其它",
+    "company": "电信五局"
+  },
+  {
+    "from": "LZ00003",
+    "to": "BJ00001",
+    "routeType": "集群通信",
+    "company": "电信一局"
+  },
+  {
+    "from": "CD00003",
+    "to": "NJ00001",
+    "routeType": "其它",
+    "company": "电信四局"
+  },
+  {
+    "from": "GZ00006",
+    "to": "KJ00012",
+    "routeType": "IP-VPN",
+    "company": "电信十五局"
+  },
+  {
+    "from": "LZ00005",
+    "to": "CD00002",
+    "routeType": "其它",
+    "company": "电信六局"
+  },
+  {
+    "from": "SY00003",
+    "to": "GZ00001",
+    "routeType": "其它",
+    "company": "电信五局"
+  },
+  {
+    "from": "SY00003",
+    "to": "KJ00004",
+    "routeType": "IP-VPN",
+    "company": "电信十局"
+  },
+  {
+    "from": "KJ00005",
+    "to": "JN00001",
+    "routeType": "其它",
+    "company": "电信三局"
+  },
+  {
+    "from": "CD00005",
+    "to": "BJ00001",
+    "routeType": "集群通信",
+    "company": "电信一局"
+  },
+  {
+    "from": "DY00005",
+    "to": "SY00003",
+    "routeType": "呼叫转移",
+    "company": "电信二局"
+  },
+  {
+    "from": "DY00004",
+    "to": "KJ00015",
+    "routeType": "IP-VPN",
+    "company": "电信十六局"
+  },
+  {
+    "from": "CD00007",
+    "to": "GZ00001",
+    "routeType": "其它",
+    "company": "电信五局"
+  },
+  {
+    "from": "LZ00001",
+    "to": "KJ00004",
+    "routeType": "IP-VPN",
+    "company": "电信十局"
+  },
+  {
+    "from": "DY00006",
+    "to": "KJ00004",
+    "routeType": "IP-VPN",
+    "company": "电信十局"
+  },
+  {
+    "from": "KJ00004",
+    "to": "JD00004",
+    "routeType": "一类卫星通信",
+    "company": "电信十二局"
+  },
+  {
+    "from": "SY00004",
+    "to": "NJ00001",
+    "routeType": "其它",
+    "company": "电信四局"
+  },
+  {
+    "from": "KJ00003",
+    "to": "NJ00005",
+    "routeType": "蜂窝移动通信",
+    "company": "电信四局"
+  },
+  {
+    "from": "CD00002",
+    "to": "GZ00002",
+    "routeType": "其它",
+    "company": "电信五局"
+  },
+  {
+    "from": "KJ00014",
+    "to": "JD00002",
+    "routeType": "一类卫星通信",
+    "company": "电信十二局"
+  },
+  {
+    "from": "NJ00003",
+    "to": "NJ00006",
+    "routeType": "呼叫转移",
+    "company": "电信四局"
+  },
+  {
+    "from": "DY00002",
+    "to": "NJ00006",
+    "routeType": "呼叫转移",
+    "company": "电信四局"
+  },
+  {
+    "from": "JN00003",
+    "to": "DY00004",
+    "routeType": "国内多方通信服务",
+    "company": "电信七局"
+  },
+  {
+    "from": "KJ00006",
+    "to": "GZ00002",
+    "routeType": "其它",
+    "company": "电信五局"
+  },
+  {
+    "from": "NJ00003",
+    "to": "JN00004",
+    "routeType": "呼叫转移",
+    "company": "电信三局"
+  },
+  {
+    "from": "SY00001",
+    "to": "CD00001",
+    "routeType": "其它",
+    "company": "电信六局"
+  }
+]

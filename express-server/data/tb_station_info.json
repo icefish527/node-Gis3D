@@ -1,0 +1,172 @@
+{
+    "RECORDS": [
+        {
+            "id": 71225,
+            "stationName": "海淀风廓线",
+            "stationNum": "54399",
+            "type": 1,
+            "longItude": "116.2905556",
+            "latItude": "39.986944442"
+        },
+        {
+            "id": 71226,
+            "stationName": "平谷风廓线",
+            "stationNum": "54424",
+            "type": 1,
+            "longItude": "117.1177778",
+            "latItude": "40.16944444"
+        },
+        {
+            "id": 71227,
+            "stationName": "密云X雷达",
+            "stationNum": "90",
+            "type": 2,
+            "longItude": "116.8519444",
+            "latItude": "40.36222222"
+        },
+        {
+            "id": 71228,
+            "stationName": "霞云岭风廓线",
+            "stationNum": "54597",
+            "type": 1,
+            "longItude": "115.7402778",
+            "latItude": "39.72888889"
+        },
+        {
+            "id": 71229,
+            "stationName": "上甸子风廓线",
+            "stationNum": "54421",
+            "type": 1,
+            "longItude": "117.1116667",
+            "latItude": "40.65888889"
+        },
+        {
+            "id": 71231,
+            "stationName": "延庆风廓线",
+            "stationNum": "54406",
+            "type": 1,
+            "longItude": "115.9688889",
+            "latItude": "40.44944444"
+        },
+        {
+            "id": 71232,
+            "stationName": "顺义X雷达",
+            "stationNum": null,
+            "type": 2,
+            "longItude": "116.6152778",
+            "latItude": "40.12694444"
+        },
+        {
+            "id": 71233,
+            "stationName": "怀柔风廓线",
+            "stationNum": "54419",
+            "type": 1,
+            "longItude": "116.6269444",
+            "latItude": "40.35777778"
+        },
+        {
+            "id": 71234,
+            "stationName": "房山X雷达",
+            "stationNum": "1",
+            "type": 2,
+            "longItude": "116.1905556",
+            "latItude": "39.69027778"
+        },
+        {
+            "id": 71235,
+            "stationName": "观象台风廓线",
+            "stationNum": "54511",
+            "type": 1,
+            "longItude": "116.4719444",
+            "latItude": "39.80888889"
+        },
+        {
+            "id": 71236,
+            "stationName": "通州X雷达",
+            "stationNum": null,
+            "type": 2,
+            "longItude": "116.7525",
+            "latItude": "39.85444444"
+        },
+        {
+            "id": 71237,
+            "stationName": "观象台探空站",
+            "stationNum": "54511",
+            "type": 3,
+            "longItude": null,
+            "latItude": null
+        },
+        {
+            "id": 71238,
+            "stationName": "观象台预警塔",
+            "stationNum": null,
+            "type": 6,
+            "longItude": null,
+            "latItude": null
+        },
+        {
+            "id": 71239,
+            "stationName": "观象台大气成分",
+            "stationNum": "54511",
+            "type": 5,
+            "longItude": null,
+            "latItude": null
+        },
+        {
+            "id": 71240,
+            "stationName": "玉泉路预警塔",
+            "stationNum": null,
+            "type": 6,
+            "longItude": "116.2466667",
+            "latItude": "39.90611111"
+        },
+        {
+            "id": 71241,
+            "stationName": "观象台国家地面站",
+            "stationNum": "54511",
+            "type": 4,
+            "longItude": null,
+            "latItude": null
+        },
+        {
+            "id": 71242,
+            "stationName": "六里桥预警塔",
+            "stationNum": null,
+            "type": 6,
+            "longItude": "116.3",
+            "latItude": "39.88027778"
+        },
+        {
+            "id": 71243,
+            "stationName": "国家气象局预警塔",
+            "stationNum": "2",
+            "type": 6,
+            "longItude": "1",
+            "latItude": "1"
+        },
+        {
+            "id": 71244,
+            "stationName": "马驹桥预警塔",
+            "stationNum": "mjq",
+            "type": 6,
+            "longItude": "116.56056996770228",
+            "latItude": "39.74951162394146"
+        },
+        {
+            "id": 71247,
+            "stationName": "三元桥预警塔",
+            "stationNum": "1",
+            "type": 4,
+            "longItude": "116.4494444",
+            "latItude": "39.95666667"
+        },
+        {
+            "id": 71248,
+            "stationName": "昌平X雷达",
+            "stationNum": "1",
+            "type": 2,
+            "longItude": "116.3461111",
+            "latItude": "40.17305556"
+        }
+    ]
+}
