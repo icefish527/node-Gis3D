@@ -4,7 +4,7 @@
     class="el-menu-demo"
     mode="horizontal"
     @select="handleSelect"
-    background-color="#545c64"
+    background-color="#00000000"
     text-color="#fff"
     active-text-color="#ffd04b"
     style="max-height:50px;"

@@ -243,7 +243,7 @@ export default {
           img_googlestreet_zl,
           img_googlestreet
         ], //可供BaseLayerPicker选择的图像图层ProviderViewModel数组
-        selectedImageryProviderViewModel: img_googlestreet_zq, //当前地形图层的显示模型，仅baseLayerPicker设为true有意
+        selectedImageryProviderViewModel: img_tdt_sl, //当前地形图层的显示模型，仅baseLayerPicker设为true有意
         scene3DOnly: true, //如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源
         navigationHelpButton: false, //是否显示右上角的帮助按钮
         homeButton: true, //是否显示Home按钮
@@ -257,9 +257,9 @@ export default {
       viewer.scene.highDynamicRange = true;
       Cesium3DViewer = viewer;
       //影像标注
-      this.addImageryProvider(
-        "http://t0.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=7711a24780452f03bb7c02fba98183b9"
-      );
+      // this.addImageryProvider(
+      //   "http://t0.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=7711a24780452f03bb7c02fba98183b9"
+      // );
 
       var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
         //url: 'https://assets.agi.com/stk-terrain/v1/tilesets/world/tiles',

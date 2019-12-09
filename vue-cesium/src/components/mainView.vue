@@ -3,12 +3,12 @@
     <div class="background">
       <cesiumContainer></cesiumContainer>
     </div>
-    <div class="top" style="background-color: rgb(84, 92, 100); border-bottom:solid 1px #e6e6e6">
+    <div class="top">
       <Header></Header>
     </div>
     <div class="middleWrap" v-show="showUI">
       <div class="middle">
-        <div class="left" style="background-color: rgba(255, 165, 0, 0.5);">
+        <div class="left" style="background-color: rgba(255, 165, 0, 0.2);">
           <p>left</p>
           <!-- <v-distpicker
             :province="select.province"
@@ -16,6 +16,9 @@
             :area="select.area"
             @selected="onSelected"
           ></v-distpicker>-->
+          <websocket></websocket>
+          <el-checkbox v-model="showUI">显示UI界面</el-checkbox>
+          <el-button type="text" @click="dialog.dialogVisible = true">打开Dialog</el-button>
           <el-cascader
             size="large"
             :options="options"
@@ -23,20 +26,25 @@
             @change="handleChange"
           ></el-cascader>
         </div>
-        <div class="right" style="background-color: #ffa07a7f;">
-          <div class="right-in">
-            <p>right</p>
-            <websocket></websocket>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="bottom" style="background-color: #90ee9085;">
-      <p>bottom</p>
-      <button @click="showAlert">showAlert</button>
-      <button @click="allScreen">allScreen</button>
-      <el-checkbox v-model="showUI">显示UI界面</el-checkbox>
-    </div>
+    <el-dialog
+      v-if="dialog.dialogVisible"
+      v-dialogDrag:{dialogDrag}="dialog.dialogDrag"
+      v-dialogChange:{dialogChange}="dialog.dialogChange"
+      ref="dialog__wrapper"
+      :close-on-click-modal="false"
+      :title="dialog.title"
+      :visible.sync="dialog.dialogVisible"
+      :before-close="handleClose"
+    >
+      <div class="dialog-body">
+        <div class="line">
+          <slot name="content"></slot>
+        </div>
+      </div>
+      <slot slot="footer" class="dialog-footer"></slot>
+    </el-dialog>
   </div>
 </template>
 
@@ -60,13 +68,20 @@ export default {
   data() {
     return {
       select: { province: "广东省", city: "广州市", area: "海珠区" },
-      showUI: false,
+      showUI: true,
       options: regionDataPlus,
       selectedOptions: [
         TextToCode["北京市"].code,
         TextToCode["北京市"]["市辖区"].code,
         TextToCode["北京市"]["市辖区"]["朝阳区"].code
-      ]
+      ],
+      dialog: {
+        // dialog显示隐藏
+        dialogVisible: false,
+        dialogDrag: true, // 可拖拽
+        dialogChange: true, // 可拉伸
+        title: "详情"
+      }
     };
   },
   methods: {
@@ -144,7 +159,7 @@ html,
 .left {
   float: left;
   position: relative;
-  width: 25%;
+  width: 400px;
   height: 100%;
 }
 .right {

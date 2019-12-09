@@ -12,6 +12,13 @@ import echartsgl from "echarts-gl"
 import Cesium from "cesium/Cesium";
 import axios from "./util/axios"
 Vue.prototype.$ajax = axios;
+// fade/zoom 等
+import 'element-ui/lib/theme-chalk/base.css';
+// collapse 展开折叠
+import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
+Vue.component(CollapseTransition.name, CollapseTransition)
+
+import './plugins/dialog'
 
 Vue.use(VueBus);
 import cesiumContainer from './components/cesiumContainer.vue'
