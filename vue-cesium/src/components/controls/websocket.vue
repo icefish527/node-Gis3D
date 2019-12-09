@@ -5,6 +5,9 @@
  
 
 <script>
+import longSock from "../../util/longSock";
+let wssCenter;
+
 export default {
   name: "websocket",
   data() {
@@ -16,53 +19,22 @@ export default {
 
   created() {
     //页面刚进入时开启长连接
-    this.initWebSocket();
+    //this.initWebSocket();
+    wssCenter = new longSock("ws://127.0.0.1:4000/", this.handler, "longsock");
+    //this.handler = this.handler.bind(this);
   },
 
   destroyed: function() {
     //页面销毁时关闭长连接
-    this.websocketclose();
+    wssCenter.close(); //断开连接
   },
 
   methods: {
-    initWebSocket() {
-      //初始化weosocket
-      const wsuri = "ws://192.168.80.128:4000/"; //ws地址
-      this.$websocket = new WebSocket(wsuri);
-      this.$websocket.onopen = this.websocketonopen;
-      this.$websocket.onerror = this.websocketonerror;
-      this.$websocket.onmessage = this.websocketonmessage;
-      this.$websocket.onclose = this.websocketclose;
-    },
-
-    websocketonopen() {
-      console.log("WebSocket连接成功");
-      let _this =this;
-    //   setInterval(function() {
-    //     _this.websocketsend("客户端发送消息" + Math.random().toFixed(2));
-    //   }, 500);
-    },
-
-    websocketonerror(e) {
-      //错误
-      console.log("WebSocket连接发生错误");
-    },
-
-    websocketonmessage(e) {
-      //数据接收
-      console.log(e);
-      this.msg = e.data;
-    },
-
-    websocketsend(agentData) {
-      //数据发送
-      this.$websocket.send(agentData);
-    },
-
-    websocketclose(e) {
-      //关闭
-
-      console.log("connection closed (" + e.code + ")");
+    handler(evt, ws) {
+      //evt 是 websockett数据
+      //ws 是请求名称，方便关闭websocket
+      console.log(evt.data);
+      this.msg = evt.data;
     }
   }
 };

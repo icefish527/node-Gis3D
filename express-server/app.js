@@ -98,7 +98,7 @@ wsServer.on('request', function (request) {
 
     connection.sendUTF('服务端发送消息' + (Math.random().toFixed(2)))
 
-  }, 500)
+  }, 10000)
 
 
 
