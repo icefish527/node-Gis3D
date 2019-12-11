@@ -7,7 +7,6 @@
     <el-dialog
       v-if="dialog.dialogVisible"
       v-dialogDrag:{dialogDrag}="dialog.dialogDrag"
-      v-dialogChange:{dialogChange}="dialog.dialogChange"
       ref="dialog__wrapper"
       :close-on-click-modal="false"
       :title="dialog.title"
@@ -19,7 +18,8 @@
           <ctl-StationFilter-ByCategory></ctl-StationFilter-ByCategory>
         </div>
       </div>
-      <slot slot="footer" class="dialog-footer"></slot>
+      <slot slot="footer" class="dialog-footer">
+      </slot>
     </el-dialog>
   </div>
 </template>
@@ -36,10 +36,16 @@ export default {
         // dialog显示隐藏
         dialogVisible: false,
         dialogDrag: true, // 可拖拽
-        dialogChange: true, // 可拉伸
         title: "详情"
       }
     };
+  },
+  mounted() {},
+  methods: {
+    handleClose(done) {
+      //这里处理关闭前的提示
+      done();
+    }
   }
 };
 </script>

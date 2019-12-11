@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import './element-variables.scss'
+import './css/index.scss'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -9,11 +10,11 @@ import echarts from "echarts"
 import echartsgl from "echarts-gl"
 import axios from "./util/axios"
 Vue.prototype.$ajax = axios;
-// fade/zoom 等
-import 'element-ui/lib/theme-chalk/base.css';
-// collapse 展开折叠
-import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
-Vue.component(CollapseTransition.name, CollapseTransition)
+// // fade/zoom 等
+// import 'element-ui/lib/theme-chalk/base.css';
+// // collapse 展开折叠
+// import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
+// Vue.component(CollapseTransition.name, CollapseTransition)
 
 import './plugins/dialog'
 

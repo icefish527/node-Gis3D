@@ -22,10 +22,7 @@
       <el-menu-item index="3-0">取消</el-menu-item>
     </el-submenu>
     <el-menu-item index="4">
-      <template slot="title">全屏</template>
-    </el-menu-item>
-    <el-menu-item index="5">
-      <template slot="title">退出</template>
+      <template slot="title">巡航</template>
     </el-menu-item>
   </el-menu>
 </template>

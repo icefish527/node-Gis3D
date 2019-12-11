@@ -61,7 +61,6 @@ export default {
   mounted() {}
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body,
@@ -90,6 +89,7 @@ html,
 }
 .top {
   top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .bottom {
   bottom: 0;

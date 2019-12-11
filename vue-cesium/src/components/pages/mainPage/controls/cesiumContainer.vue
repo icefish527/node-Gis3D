@@ -1340,7 +1340,8 @@ export default {
 
 <style>
 .cesium-viewer-toolbar {
-  top: 10px;
+  top: auto;
+  bottom: 10px;
   z-index: 999;
 }
 .tooltipdiv {
