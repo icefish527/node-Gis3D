@@ -5,11 +5,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VueBus from './vue-bus'
-import vDialogs from 'v-dialogs'
-import VDistpicker from 'v-distpicker'
 import echarts from "echarts"
 import echartsgl from "echarts-gl"
-import Cesium from "cesium/Cesium";
 import axios from "./util/axios"
 Vue.prototype.$ajax = axios;
 // fade/zoom 等
@@ -21,7 +18,6 @@ Vue.component(CollapseTransition.name, CollapseTransition)
 import './plugins/dialog'
 
 Vue.use(VueBus);
-import cesiumContainer from './components/cesiumContainer.vue'
 
 import api from "./js/api/api";
 Vue.prototype.$api = api;
@@ -39,19 +35,10 @@ Vue.use(websocket, 'ws://localhost:4000', {
 
 
 Vue.use(ElementUI);
-Vue.use(vDialogs, {
-  global: {
-    maxButton: false
-  }
-})
-
-Vue.component('v-distpicker', VDistpicker)
 Vue.component('echarts', echarts)
 Vue.component('echartsgl', echartsgl)
-Vue.component('cesium', Cesium)
 
 
-Vue.component('cesiumContainer', cesiumContainer)
 Vue.config.productionTip = false
 
 new Vue({

@@ -34,12 +34,12 @@ import * as Cesium from "cesium/Cesium";
 // noinspection ES6UnusedImports
 import widgets from "cesium/Widgets/widgets.css";
 import api from "@/js/api/api";
-import Particle from "../plugins/wind/Particle.js";
-import WindField from "../plugins/wind/WindField.js";
-import Windy from "../plugins/wind/Windy.js";
-import polylineTrail from "../plugins/polylineTrail.js";
-import ysccss from "../plugins/ysc/css/ysc.css";
-import ysc from "../plugins/ysc/ysc.js";
+import Particle from "@/plugins/wind/Particle.js";
+import WindField from "@/plugins/wind/WindField.js";
+import Windy from "@/plugins/wind/Windy.js";
+import polylineTrail from "@/plugins/polylineTrail.js";
+import ysccss from "@/plugins/ysc/css/ysc.css";
+import ysc from "@/plugins/ysc/ysc.js";
 let Cesium3DViewer;
 let cloudLayer;
 
@@ -104,7 +104,7 @@ let img_tdt_yx = new Cesium.ProviderViewModel({
   name: "影像底图",
   tooltip: "影像底图",
   //显示切换的图标
-  iconUrl: require("../assets/images/img_tdt_yx.png"),
+  iconUrl: require("@/assets/images/img_tdt_yx.png"),
   creationFunction: function() {
     var esri = new Cesium.WebMapTileServiceImageryProvider({
       url:
@@ -120,7 +120,7 @@ let img_tdt_yx = new Cesium.ProviderViewModel({
 let img_tdt_sl = new Cesium.ProviderViewModel({
   name: "矢量底图",
   tooltip: "矢量底图",
-  iconUrl: require("../assets/images/img_tdt_sl.png"),
+  iconUrl: require("@/assets/images/img_tdt_sl.png"),
   creationFunction: function() {
     var esri = new Cesium.WebMapTileServiceImageryProvider({
       url:
@@ -135,7 +135,7 @@ let img_tdt_sl = new Cesium.ProviderViewModel({
 let img_tdt_dx = new Cesium.ProviderViewModel({
   name: "地形底图",
   tooltip: "地形底图",
-  iconUrl: require("../assets/images/img_tdt_dx.png"),
+  iconUrl: require("@/assets/images/img_tdt_dx.png"),
   creationFunction: function() {
     var esri = new Cesium.WebMapTileServiceImageryProvider({
       url:
@@ -151,7 +151,7 @@ let img_googlestreet_zq = new Cesium.ProviderViewModel({
   name: "藏青街道",
   tooltip: "藏青街道",
   //显示切换的图标
-  iconUrl: require("../assets/images/img_tdt_yx.png"),
+  iconUrl: require("@/assets/images/img_tdt_yx.png"),
   creationFunction: function() {
     var esri = new Cesium.createTileMapServiceImageryProvider({
       url: "http://192.168.2.119:10080/googlestreet10bluegreen",
@@ -167,7 +167,7 @@ let img_googlestreet_zl = new Cesium.ProviderViewModel({
   name: "藏蓝街道",
   tooltip: "藏蓝街道",
   //显示切换的图标
-  iconUrl: require("../assets/images/img_tdt_yx.png"),
+  iconUrl: require("@/assets/images/img_tdt_yx.png"),
   creationFunction: function() {
     var esri = new Cesium.createTileMapServiceImageryProvider({
       url: "http://192.168.2.119:10080/googlestreet10blue",
@@ -183,7 +183,7 @@ let img_googlestreet = new Cesium.ProviderViewModel({
   name: "原色街道",
   tooltip: "原色街道",
   //显示切换的图标
-  iconUrl: require("../assets/images/img_tdt_yx.png"),
+  iconUrl: require("@/assets/images/img_tdt_yx.png"),
   creationFunction: function() {
     var esri = new Cesium.createTileMapServiceImageryProvider({
       url: "http://192.168.2.119:10080/googlestreet10",
@@ -205,6 +205,9 @@ let timer;
 
 export default {
   name: "cesiumContainer",
+  components: {
+    Cesium
+  },
   data() {
     return {
       position: "40,116.5,300000"
@@ -512,19 +515,19 @@ export default {
 
         //var pollutionCount = Math.ceil(Math.random() * 10);
         if (station.type == 0) {
-          imageurl = require("../assets/images/tubiao/检测站-绿.png");
+          imageurl = require("@/assets/images/tubiao/检测站-绿.png");
         } else if (
           station.type == 3 ||
           station.type == 4 ||
           station.type == 5
         ) {
-          imageurl = require("../assets/images/tubiao/检测站-黄.png");
+          imageurl = require("@/assets/images/tubiao/检测站-黄.png");
         } else if (
           station.type == 1 ||
           station.type == 2 ||
           station.type == 6
         ) {
-          imageurl = require("../assets/images/tubiao/检测站-红.png");
+          imageurl = require("@/assets/images/tubiao/检测站-红.png");
         }
 
         if (station.lon == null || station.lat == null) {
@@ -863,7 +866,7 @@ export default {
         minR: 0, //最好为0
         deviationR: 20, //差值 差值也大 速度越快
         eachInterval: 1000, //两个圈的时间间隔
-        imageUrl: require("../plugins/ysc/images/redCircle2.png")
+        imageUrl: require("@/plugins/ysc/images/redCircle2.png")
       });
 
       //如果添加中心线的话：

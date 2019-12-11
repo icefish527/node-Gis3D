@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import mainView from './components/mainView.vue'
-import loadingView from './components/loadingView.vue'
+import mainView from './components/pages/mainPage/mainView'
+import loadingView from './components/pages/loadingPage/loadingView'
 
 Vue.use(Router)
 

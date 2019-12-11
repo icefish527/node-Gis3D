@@ -5,7 +5,7 @@
  
 
 <script>
-import longSock from "../../util/longSock";
+import longSock from "@/util/longSock";
 let wssCenter;
 
 export default {

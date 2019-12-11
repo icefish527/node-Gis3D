@@ -1,7 +1,7 @@
 <template>
   <div style="width:100% :after">
-    <div style="float:left;display:inline-block">
-      <img src="../assets/logo.png" style="height:50px;margin-left:25px;" />
+    <div style="float:left;">
+      <img src="@/assets/logo.png" style="height:50px;margin-left:25px;display:inline-block" />
       <div style="display:inline-block">
         <ctl-menu></ctl-menu>
       </div>
@@ -13,11 +13,13 @@
 </template>
 <script>
 import Vue from "vue";
-import ctlMenu from "./controls/ctl-menu";
-import ctlStationFilter from "./controls/ctl-stationfilter";
-Vue.component("ctl-menu", ctlMenu);
-Vue.component("ctl-Station-Filter", ctlStationFilter);
+import ctlMenu from "./ctl-menu";
+import ctlStationFilter from "./ctl-stationfilter";
 export default {
+  components: {
+    ctlMenu,
+    ctlStationFilter
+  },
   data() {
     return {};
   },
