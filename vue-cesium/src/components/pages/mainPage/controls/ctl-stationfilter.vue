@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <el-button type="text" @click="dialog.dialogVisible = true">filter</el-button>
+      <el-button @click="dialog.dialogVisible = true">站点查询</el-button>
     </div>
 
     <el-dialog
@@ -12,14 +12,16 @@
       :title="dialog.title"
       :visible.sync="dialog.dialogVisible"
       :before-close="handleClose"
+      @close="handleFilterDialogClosed"
     >
       <div class="dialog-body">
         <div class="line">
-          <ctl-StationFilter-ByCategory></ctl-StationFilter-ByCategory>
+          <transition name="fade" mode="out-in">
+            <component :is="view" :list="selectedCity"></component>
+          </transition>
         </div>
       </div>
-      <slot slot="footer" class="dialog-footer">
-      </slot>
+      <slot slot="footer" class="dialog-footer"></slot>
     </el-dialog>
   </div>
 </template>
@@ -27,8 +29,12 @@
 <script>
 import Vue from "vue";
 import ctlStationFilterByCategory from "./ctl-stationfilterbycategory";
-Vue.component("ctl-StationFilter-ByCategory", ctlStationFilterByCategory);
+import ctlStationResultList from "./ctl-stationResultList";
 export default {
+  components: {
+    ctlStationFilterByCategory,
+    ctlStationResultList
+  },
   data() {
     return {
       selectedCity: [],
@@ -37,14 +43,27 @@ export default {
         dialogVisible: false,
         dialogDrag: true, // 可拖拽
         title: "详情"
-      }
+      },
+      view: "ctl-StationFilter-ByCategory"
     };
   },
-  mounted() {},
+  created() {
+    this.$bus.on("onStationFilterOkClick", result => {
+      this.view = "ctl-Station-ResultList";
+      this.dialog.title = "台站列表";
+      this.selectedCity = result;
+    });
+  },
   methods: {
     handleClose(done) {
       //这里处理关闭前的提示
       done();
+    },
+    handleOnOkClick() {
+      this.showfilter = false;
+    },
+    handleFilterDialogClosed() {
+      this.view = "ctl-StationFilter-ByCategory";
     }
   }
 };
