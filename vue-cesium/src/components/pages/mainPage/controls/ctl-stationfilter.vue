@@ -8,6 +8,7 @@
       v-if="dialog.dialogVisible"
       v-dialogDrag:{dialogDrag}="dialog.dialogDrag"
       ref="dialog__wrapper"
+      :modal="false"
       :close-on-click-modal="false"
       :title="dialog.title"
       :visible.sync="dialog.dialogVisible"

@@ -466,11 +466,15 @@ export default {
       }
     },
 
+    FlytoEntity(entity) {
+      var flyPromise = Cesium3DViewer.flyTo(entity, {
+        duration: 3,
+        offset: new Cesium.HeadingPitchRange(0.0, Cesium.Math.toRadians(-30.0))
+      });
+    },
+
     queryJianCeZhanAddToMap(params = null) {
-      params = {
-        stationNum: "54511"
-      };
-      api.station.getStations(params).then(data => {
+      api.station.getStationsAll(params).then(data => {
         let stations = [];
         data.RECORDS.forEach(function(info, infoIndex) {
           stations.push({
@@ -1317,6 +1321,12 @@ export default {
           this.removeStage();
           break;
       }
+    });
+    this.$bus.on("FlyToStation", args => {
+      let selStation = args;
+      let entity = AllLayersDic["定期检验"].get(selStation.id);
+      console.log(entity);
+      this.FlytoEntity(entity);
     });
   }
 };

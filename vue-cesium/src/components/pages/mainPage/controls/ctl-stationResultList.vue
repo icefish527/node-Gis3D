@@ -1,10 +1,6 @@
 <template>
   <div>
-    <el-table
-      :data="tableData"
-      :highlight-current-row="true"
-      style="width: 100%"
-    >
+    <el-table :data="tableData" :highlight-current-row="true" style="width: 100%">
       <el-table-column label="站点" width="180">
         <template slot-scope="scope">
           <span style="margin-left: 10px">{{ scope.row.stationName }}</span>
@@ -23,8 +19,13 @@
       </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-          <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+          <el-button size="mini" type="text" @click="handleFlyTo(scope.$index, scope.row)">定位</el-button>
+          <el-button size="mini" type="text" @click="handleEnterDetail(scope.$index, scope.row)">进入</el-button>
+          <el-button
+            size="mini"
+            type="text"
+            @click="handlePushPolling(scope.$index, scope.row)"
+          >加入巡航</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -56,10 +57,15 @@ export default {
     this.getStations(querylist);
   },
   methods: {
-    handleEdit(index, row) {
+    handleFlyTo(index, row) {
+      let item = this.tableData[index];
+      console.log(item);
+      this.$bus.emit("FlyToStation", item);
+    },
+    handleEnterDetail(index, row) {
       console.log(index, row);
     },
-    handleDelete(index, row) {
+    handleEnterDetail(index, row) {
       console.log(index, row);
     },
     getStations(querylist) {
@@ -67,7 +73,7 @@ export default {
       let params = {
         stationNum: "54511"
       };
-      api.station.getStations(params).then(data => {
+      api.station.getStationsByNumber(params).then(data => {
         let stations = [];
         data.RECORDS.forEach(function(info, infoIndex) {
           stations.push({
