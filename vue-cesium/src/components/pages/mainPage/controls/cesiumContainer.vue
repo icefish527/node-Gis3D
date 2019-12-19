@@ -109,7 +109,10 @@ let img_tdt_yx = new Cesium.ProviderViewModel({
     var esri = new Cesium.WebMapTileServiceImageryProvider({
       url:
         "http://t0.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=7711a24780452f03bb7c02fba98183b9",
-      maximumLevel: 18
+      maximumLevel: 18,
+      layer: "img",
+      style: "default",
+      tileMatrixSetID: "w"
     });
     //影像标注
     return esri;
@@ -125,7 +128,10 @@ let img_tdt_sl = new Cesium.ProviderViewModel({
     var esri = new Cesium.WebMapTileServiceImageryProvider({
       url:
         "http://t0.tianditu.gov.cn/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=7711a24780452f03bb7c02fba98183b9",
-      maximumLevel: 18
+      maximumLevel: 18,
+      layer: "vec",
+      style: "default",
+      tileMatrixSetID: "w"
     });
     return esri;
   }
@@ -140,7 +146,10 @@ let img_tdt_dx = new Cesium.ProviderViewModel({
     var esri = new Cesium.WebMapTileServiceImageryProvider({
       url:
         "http://t0.tianditu.gov.cn/ter_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=ter&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=7711a24780452f03bb7c02fba98183b9",
-      maximumLevel: 18
+      maximumLevel: 18,
+      layer: "ter",
+      style: "default",
+      tileMatrixSetID: "w"
     });
     return esri;
   }
@@ -264,14 +273,14 @@ export default {
       //   "http://t0.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles&tk=7711a24780452f03bb7c02fba98183b9"
       // );
 
-      var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
-        //url: 'https://assets.agi.com/stk-terrain/v1/tilesets/world/tiles',
-        //url: 'https://assets02.agi.com/stk-terrain/v1/tilesets/world/tiles',
-        url: "http://192.168.2.119:10081/terrain",
-        //requestWaterMask: true,
-        requestVertexNormals: true
-      });
-      viewer.scene.globe.terrainProvider = cesiumTerrainProviderMeshes;
+      // var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
+      //   url: 'https://assets.agi.com/stk-terrain/v1/tilesets/world/tiles',
+      //   //url: "https://assets02.agi.com/stk-terrain/v1/tilesets/world/tiles",
+      //   //url: "http://192.168.2.119:10081/terrain",
+      //   //requestWaterMask: true,
+      //   requestVertexNormals: true
+      // });
+      //viewer.scene.globe.terrainProvider = cesiumTerrainProviderMeshes;
       // viewer.scene.primitives.add(new Cesium3DTileset({
       //     url: 'http://127.0.0.1:10081/3DTiles/dytqx3dtiles/tileset.json' //   ./data/3dtiles-lab/tileset.json
       // }));
@@ -404,7 +413,7 @@ export default {
         // }, 300);
       };
       this.showCloud();
-      this.Flyto("39.333,115.333,5000000");
+      //this.Flyto("39.333,115.333,5000000");
       setTimeout(this.viewHome, 3000);
       //viewHome();
       this.queryJianCeZhanAddToMap();
@@ -1148,7 +1157,7 @@ export default {
         );
       });
 
-      option = {
+      let option = {
         animation: !1,
         GLMap: {},
         series: series
@@ -1160,9 +1169,9 @@ export default {
     Flyto(position) {
       var strs = new Array(); //定义一数组
       strs = position.split(","); //字符分割
-      var lon = strs[1];
-      var lat = strs[0];
-      var alt = strs[2];
+      var lon = Number.parseFloat(strs[1]);
+      var lat = Number.parseFloat(strs[0]);
+      var alt = Number.parseFloat(strs[2]);
       Cesium3DViewer.scene.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(lon, lat, alt), // 设置位置
         duration: 2.5,
