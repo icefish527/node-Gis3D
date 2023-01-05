@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
+    "@vue/cli-service": "^5.0.8",
     "element-theme-chalk": "^2.13.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
